@@ -1,0 +1,336 @@
+/* Font Family */
+@font-face {
+    font-family: "vazir";
+    src: url(font/Vazir.eot) format('eot'),
+        url(font/Vazir.ttf) format('truetype'),
+        url(font/Vazir.woff) format('woff'),
+        url(font/Vazir.woff2) format('woff2');
+}
+
+/* reset html */
+* {
+    font-family: "vazir";
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7c7c7c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    transition: all ease 1s;
+    border-radius: 2rem;
+}
+
+/* Main Css */
+.bg-header,
+.bg-footer {
+    background: linear-gradient(to bottom, #8E54E9, #4776E6);
+}
+
+.nav-item>.hover-li:hover {
+    background: #fff;
+    border-radius: 5rem;
+    transition: all ease 1s;
+    color: black !important;
+}
+
+.bg-header:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    top: 2px;
+    transition: transform 0.25s;
+    color: rgb(172, 172, 172);
+    background: #fff;
+    font-size: 30px;
+    transform: scaleX(1);
+    border-radius: 3px;
+}
+
+.bg-header:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    right: 0;
+    bottom: 2px;
+    transition: transform 0.25s;
+    font-size: 30px;
+    transform: scaleX(1);
+    border-radius: 3px;
+}
+
+.bg-banner {
+    min-height: 57vh;
+    background-image: url(img/banner.svg);
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 100px auto;
+}
+
+.bg-banner .img-banner {
+    position: absolute;
+    width: 300px;
+    top: 120px;
+    right: 125px;
+}
+
+.caption-img:hover #img-hover {
+    animation: pulse 1.3s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.6);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+
+}
+
+.my-text {
+    background: linear-gradient(270deg, #8E54E9, #4776E6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.caption-img {
+    position: absolute;
+    left: 18rem;
+    top: 12rem;
+    line-height: 2;
+}
+
+.bg-blue {
+    background-color: #4776E6;
+    border-radius: 5rem;
+    color: white !important;
+}
+
+.my-btn {
+    background: linear-gradient(270deg, #8E54E9, #4776E6);
+    color: #fff !important;
+    border-radius: 5rem;
+}
+
+.ab-text::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 5px;
+    top: 57px;
+    right: 9rem;
+    background: linear-gradient(270deg, #8E54E9, #4776E6);
+    border-radius: 15px;
+}
+
+.ab-text::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 5px;
+    top: 57px;
+    left: 9rem;
+    background: linear-gradient(270deg, #8E54E9, #4776E6);
+    border-radius: 15px;
+}
+
+.radius-img,
+.radius-btn,
+.radius-box {
+    /* border-radius: 20% 0px; */
+    border-radius: 15px 55px 15px 55px;
+    box-shadow: 0px 0px 7px #0077ee;
+}
+
+.caption-about {
+    position: relative;
+    top: 4rem;
+    line-height: 2;
+}
+
+.description {
+    transform: translateY(20px) scale(1.1);
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+
+#des-hover {
+    margin-top: 70px;
+}
+
+#des-hover:hover .description {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all ease 0.3s;
+}
+
+.skills-content .left .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skills-content .left p {
+    text-align: justify;
+}
+
+.skills-content .left a {
+    display: inline-block;
+    background: #0077ee;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #0077ee;
+    transition: all 0.3s ease;
+}
+
+.skills-content .left a:hover {
+    color: black;
+    background: none;
+    text-decoration: none;
+    border-radius: 5rem;
+}
+
+.skills-content .right .bars {
+    margin-bottom: 15px;
+}
+
+.skills-content .right .info {
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills-content .right span {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.skills-content .right .line {
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+
+.skills-content .right .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(270deg, #8E54E9, #4776E6);
+    border-radius: 13px;
+}
+
+.skills-content .right .html::before {
+    width: 90%;
+}
+
+.skills-content .right .css::before {
+    width: 90%;
+}
+
+.skills-content .right .js::before {
+    width: 80%;
+}
+
+.skills-content .right .Jquery::before {
+    width: 80%;
+}
+
+.skills-content .right .figma::before {
+    width: 70%;
+}
+
+.button {
+    transform: translate(20px) scale(1.2);
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+
+#btn-hover:hover .button {
+    transform: translate(0);
+    opacity: 1;
+    transition: all ease 0.3s;
+}
+
+.btn-h1 {
+    transform: translate(20px) scale(1.2);
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+
+#hover-project:hover .btn-h1 {
+    transform: translate(0);
+    opacity: 1;
+    transition: all ease 0.3s;
+}
+
+.text-box input {
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+    background: #0077ee;
+    border: 0;
+    padding-left: 126px;
+    color: rgb(255 255 255 /96%);
+    transition: 0.3s;
+}
+
+.text-box label {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    transform-origin: 0% 0%;
+    pointer-events: none;
+    top: 4px;
+    left: 4px;
+    width: 110px;
+    height: 52px;
+    border-radius: 27px;
+    background: #50fa91;
+    transition: 0.3s;
+}
+
+.text-box input::placeholder {
+    color: rgb(255 255 255 /50%);
+}
+
+.text-box:is(input:focus, input:valid)~label {
+    translate: 0 -54px;
+    scale: 0.825;
+}
+
+.radius {
+    border-radius: 25px 25px 0px 0px;
+}

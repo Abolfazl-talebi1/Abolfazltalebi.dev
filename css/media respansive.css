@@ -1,0 +1,76 @@
+@media (max-width: 991.98px) {
+    #section-banner {
+        display: none;
+    }
+
+    #section-banner-1 {
+        display: contents;
+    }
+
+
+    .name h2 {
+        font-size: 31px !important;
+    }
+
+    .jobs h2 {
+        font-size: 24px !important;
+    }
+
+    .caption-1 {
+        position: relative;
+        top: 0px !important;
+    }
+
+    .typing-text {
+        color: #321e57;
+        margin-right: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 5s steps(14) infinite;
+        border-left: 4px solid #321e57;
+        border-radius: 4px;
+    }
+
+    @keyframes typing {
+        0% {
+            width: 0ch;
+        }
+
+        50% {
+            width: 13ch;
+        }
+
+        100% {
+            width: 0ch;
+        }
+    }
+
+    .ab-text::before {
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 5px;
+        top: 57px;
+        right: 90px !important;
+        background: linear-gradient(270deg, #8E54E9, #4776E6);
+        border-radius: 15px;
+    }
+
+    .ab-text::after {
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 5px;
+        top: 57px;
+        left: 90px !important;
+        background: linear-gradient(270deg, #8E54E9, #4776E6);
+        border-radius: 15px;
+    }
+
+    .offset-3 {
+        margin-right: 37%;
+    }
+    .margin-top{
+        margin-top: 6rem;
+    }
+}
